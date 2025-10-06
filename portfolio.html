@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="https://fontawesome.com/icons/google?f=brands&s=solid">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+</style>
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <header>
+
+    <h1>My Portfolio</h1>
+    <nav>
+
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>I'm <span style="color:var(--accent)">Nivetha</span></h1>
+    <p>Full-stack Developer | Designer | Data Analyst | Tech Enthusiast |</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate web developer who loves building clean and user-friendly websites.
+      I enjoy learning new technologies and creating projects that bring ideas to life.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A simple personal portfolio built with HTML, CSS, and JS.</p>
+      </div>
+      <div class="project-card">
+        <h3>Data Analyst</h3>
+        <p>Analysis the sales market projects built with excel,Sql,python and Power bi.</p>
+      </div>
+      <div class="project-card">
+        <h3>Blog Design</h3>
+        <p>A clean and responsive blog template with modern UI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- skill Section -->
+
+  <section id="projects1">
+    <h2>skills</h2>
+    <div class="projects1">
+      <div class="project-card1">
+        <h3>Html</h3>
+      </div>
+      <div class="project-card1">
+        <h3>Css</h3>
+        <i class="fa-brands fa-css"></i>
+      </div>
+      <div class="project-card1">
+        <h3>Javascript</h3>
+        <i class="fa-brands fa-javascript"></i>
+      </div>
+      <div class="project-card1">
+        <h3>MS office</h3>
+        <i class="fa-brands fa-microsoft"></i>
+      </div>
+      <div class="project-card1">
+        <h3>Sql</h3>
+        <i class="fa-brands fa-sql"></i>
+      </div>
+      <div class="project-card1">
+        <h3>Mysql</h3>
+        <i class="fa-brands fa-mysql"></i>
+      </div>
+      <div class="project-card1">
+        <h3>Power Bi</h3>
+        <i class="fa-brands fa-powerbi"></i>
+      </div>
+      <div class="project-card1">
+        <h3>Github</h3>
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <div class="project-card1">
+        <h3>Canvas</h3>
+        <i class="fa-brands fa-canvas"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- experience Section -->
+
+
+  <div class="projects">
+
+    <experience class="exper">
+
+      <div class="experience-card">
+        <div class="card-header">
+          <h2>Data Analyst trainer</h2>
+          <p>Balsam Creative technology | Jan 2025 - Present</p>
+          <button class="dropdown-btn">Details &#x25BC;</button>
+        </div>
+
+        <div class="card-dropdown">
+          <ul>
+            <li>Developed responsive UI with HTML, CSS, JS</li>
+            <li>Collaborated with backend for API integration</li>
+            <li>Optimized performance and accessibility</li>
+          </ul>
+        </div>
+      </div>
+
+    </experience>
+
+    <experience class="exper">
+
+      <div class="experience-card">
+        <div class="card-header">
+          <h2>Sales Specialist</h2>
+          <p>Imarque Solutions Pvt.Lid | JUN 2025 - JUL 2025</p>
+          <button class="dropdown-btn1">Details &#x25BC;</button>
+        </div>
+
+        <div class="card-dropdown1">
+          <ul>
+            <li>Customer Onboarding Specialist trainee</li>
+            <li>tally Software sales</li>
+            <li>(Sales Presentation,Accounts Payable(AP),Account Rrceivable(AR))</li>
+          </ul>
+        </div>
+      </div>
+
+    </experience>
+
+    <experience class="exper">
+
+      <div class="experience-card">
+        <div class="card-header">
+          <h2>Frontend Developer</h2>
+          <p>Duskcoder Technosoft Crop. | NOV 2024 - NOV 2024</p>
+          <button class="dropdown-btn2">Details &#x25BC;</button>
+        </div>
+
+        <div class="card-dropdown2">
+          <ul>
+            <li>Internship as Frontend Developer</li>
+            <li>Developed responsive UI with HTML, CSS, JS</li>
+            <li>Optimized performance and accessibility</li>
+          </ul>
+        </div>
+      </div>
+
+    </experience>
+  </div>
+
+
+<!---
+  <! Contact Section --
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you for your message, " + document.getElementById("name").value + "!");
+      this.reset();
+    });
+  </script>-->
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="formData">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <p id="response"></p>
+<!-----
+  <script>
+    document.getElementById("formData").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      };
+
+      fetch("http://127.0.0.1:8000/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("response").innerText = data.message;
+        document.getElementById("formData").reset();
+      })
+      .catch(err => {
+        document.getElementById("response").innerText = "Error: " + err;
+      });
+    });
+  </script>
+---->
+
+<script>
+document.getElementById("formData").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
+
+  fetch("http://127.0.0.1:8000/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(data => {
+    //  SweetAlert success popup
+    Swal.fire({
+      title: 'Success!',
+      text: data.message,   // message from backend
+      icon: 'success',
+      confirmButtonText: 'OK',
+      timer: 2000,          // auto-close after 2 seconds
+      timerProgressBar: true
+    });
+
+    document.getElementById("formData").reset();  // reset form
+  })
+  .catch(err => {
+    // SweetAlert error popup
+    Swal.fire({
+      title: 'Error!',
+      text: 'Something went wrong. Please try again.',
+      icon: 'error',
+      confirmButtonText: 'OK'
+    });
+  });
+});
+</script>
+
+  
+  <script src="script.js"></script>
+  <!-- SweetAlert2 CSS & JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+   <footer>
+    <p>&copy; 2025 Nivetha. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+.exper {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: var(--bg);
+    padding: 30px;
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.experience-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dropdown-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+.dropdown-btn1 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+.dropdown-btn2 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+.dropdown-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown1-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown2-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-dropdown {
+    display: none;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease-in-out;
+ 
+}
+
+.card-dropdown1 {
+    display: none;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease-in-out;
+    
+}
+
+.card-dropdown2 {
+    display: none;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease-in-out;
+    
+}
+
+.card-dropdown ul,
+.card-dropdown1 ul,
+.card-dropdown2 ul {
+    padding-left: 20px;
+    border-radius: 20%;
+    
+}
+
+
+.card-dropdown li,
+.card-dropdown1 li,
+.card-dropdown2 li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Animation for dropdown */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .experience-card {
+        padding: 15px;
+    }
+
+    .dropdown-btn {
+
+        text-align: center;
+    }
+}
+
+/*---nav bar----*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: block;
+
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+        display: none;
+
+    }
+
+    .sidenav a {
+        font-size: 18px;
+
+    }
+}

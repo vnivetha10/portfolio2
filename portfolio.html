@@ -7,6 +7,10 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="https://fontawesome.com/icons/google?f=brands&s=solid">
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 </style>
@@ -14,22 +18,95 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.tailwindcss.com"></script>
+     
 
+
+  <style>
+    .fade-in {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sticky-nav {
+      transition: box-shadow 0.4s ease;
+    }
+
+    /* Custom colors */
+    .nav-color {
+      background-color: #0F4EFF63;/* fully solid blue */
+    }
+    .text-custom {
+      color:#06052F; /* deep navy text */
+       font-family: "Josefin Sans", sans-serif;
+    }
+  </style>
 </head>
-
 <body>
-  <header>
 
-    <h1>My Portfolio</h1>
-    <nav>
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full top-0 left-0 z-50 sticky-nav nav-color">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-extrabold text-custom">
+        My portfolio
+      </a>
 
-  </header>
+      <!-- Desktop Links -->
+      <div class="hidden md:flex space-x-6 items-center text-lg">
+        <a href="#hero" class="px-3 py-2 rounded-lg transition duration-300 hover:bg-white/20">Home</a>
+        <a href="#about" class="px-3 py-2 rounded-lg transition duration-300 hover:bg-white/20">About</a>
+        <a href="#projects" class="px-3 py-2 rounded-lg transition duration-300 hover:bg-white/20">Projects</a>
+        <a href="#" class="px-3 py-2 rounded-lg transition duration-300 hover:bg-white/20">Experience</a>
+        <a href="#contact" class="px-3 py-2 rounded-lg transition duration-300 hover:bg-white/20">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-custom focus:outline-none">
+        <svg class="w-17 h-7" fill="fa-canvas" stroke="currentColor" stroke-width="3"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h17" />
+        </svg>                
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fade-in md:hidden nav-color text-center py-4">
+      <a href="#hero" class="block py-2 hover:bg-white/20 rounded-lg transition">Home</a>
+      <a href="#about" class="block py-2 hover:bg-white/20 rounded-lg transition">About</a>
+      <a href="#projects" class="block py-2 hover:bg-white/20 rounded-lg transition">Projects</a>
+      <a href="#" class="block py-2 hover:bg-white/20 rounded-lg transition">Experience</a>
+      <a href="#contact" class="block py-2 hover:bg-white/20 rounded-lg transition">Contact</a>
+    </div>
+  </nav>
+
+
+
+  <script>
+    // Toggle Mobile Menu
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Sticky Scroll Shadow Effect
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add("shadow-lg");
+      } else {
+        navbar.classList.remove("shadow-lg");
+      }
+    });
+  </script>
+
 
 
   <!-- Hero Section -->
@@ -73,14 +150,19 @@
     <div class="projects1">
       <div class="project-card1">
         <h3>Html</h3>
+        <i class="fa-brands fa-html5"></i>
       </div>
       <div class="project-card1">
         <h3>Css</h3>
-        <i class="fa-brands fa-css"></i>
+      <i class="fa-brands fa-css3-alt"></i>
       </div>
       <div class="project-card1">
         <h3>Javascript</h3>
-        <i class="fa-brands fa-javascript"></i>
+       <i class="fa-brands fa-js"></i>
+      </div>
+       <div class="project-card1">
+        <h3>Python</h3>
+      <i class="fa-brands fa-python"></i>
       </div>
       <div class="project-card1">
         <h3>MS office</h3>
@@ -88,15 +170,18 @@
       </div>
       <div class="project-card1">
         <h3>Sql</h3>
-        <i class="fa-brands fa-sql"></i>
+       <i class="fa-solid fa-code"></i>
       </div>
       <div class="project-card1">
         <h3>Mysql</h3>
-        <i class="fa-brands fa-mysql"></i>
+      <i class="fa-solid fa-database"></i>
       </div>
       <div class="project-card1">
         <h3>Power Bi</h3>
-        <i class="fa-brands fa-powerbi"></i>
+        <i class="fa-solid fa-chart-simple"></i>
+
+
+         
       </div>
       <div class="project-card1">
         <h3>Github</h3>
@@ -125,9 +210,9 @@
 
         <div class="card-dropdown">
           <ul>
-            <li>Developed responsive UI with HTML, CSS, JS</li>
-            <li>Collaborated with backend for API integration</li>
-            <li>Optimized performance and accessibility</li>
+            <li>Analysis the datas and cleaning </li>
+            <li>creating a interactive dashboard in Power BI</li>
+            <li>Teaching the data Analyst </li>
           </ul>
         </div>
       </div>
@@ -177,7 +262,7 @@
 
 
 <!---
-  <! Contact Section --
+
   <section id="contact">
     <h2>Contact Me</h2>
     <form id="contactForm">
@@ -200,15 +285,18 @@
     });
   </script>-->
 
-<section id="contact">
-    <h2>Contact Me</h2>
+  <!----Contact Section -->
+ <div class="form-container">
+        <h2>Submit Your Info</h2>
+        <h2>Contact Me</h2>
     <form id="formData">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <input type="text" id="name" placeholder="Your Name" required /><br>
+      <input type="email" id="email" placeholder="Your Email" required /><br>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea><br>
       <button type="submit">Send</button>
     </form>
-  </section>
+    </div> 
+  
 
   <p id="response"></p>
 <!-----
@@ -285,6 +373,19 @@ document.getElementById("formData").addEventListener("submit", function(e) {
   <!-- SweetAlert2 CSS & JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<icon>
+<div class="social-icons">
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/yourusername" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.instagram.com/yourprofile" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</icon>
 
 
    <footer>

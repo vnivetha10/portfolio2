@@ -183,17 +183,19 @@ h2 {
 #formdata {
   max-width: 600px;
    font-family: "Josefin Sans", sans-serif;
+   margin: auto;
+   align-items: center;
 }
 
 
 
-
+/*
 input,
 textarea,button {
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 25px;
+  margin: 25px 0;
   border: none;
   border-radius: 8px;
   background: #eeeff0;
@@ -206,7 +208,7 @@ textarea,button {
 
 button {
   font-family: "Josefin Sans", sans-serif;
-  padding: 10px 20px;
+  padding: 25px 30px;
   border: none;
   border-radius: 8px;
   background: var(--accent);
@@ -219,25 +221,18 @@ button {
 button:hover {
   opacity: 0.9;
 }
-/*
-  input,
-textarea {
-            font-family: "Josefin Sans", sans-serif;
-            background: linear-gradient(135deg, #0F4EFF63, #acb6e5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .form-container {
+*/
+ .form-container {
             background-color: white;
             border-radius: 15px;
             padding: 30px 40px;
             width: 350px;
             box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+
         }
 
         h2 {
@@ -245,19 +240,12 @@ textarea {
             color: #333;
         }
 
-        label {
-            display: block;
-            text-align: left;
-            margin-bottom: 5px;
-            color: #444;
-            font-weight: 500;
-        }
-
+       
         input,
         textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 30px;
+            margin: auto;
             border-radius: 8px;
             border: 1px solid #ccc;
             font-size: 14px;
@@ -266,26 +254,26 @@ textarea {
         input:focus,
         textarea:focus {
             outline: none;
-            border-color: #0F4EFF63;
-            box-shadow: 0 0 5px #0F4EFF63;
+            border-color:  #0F4EFF63;
+            box-shadow: 0 0 5px  #0F4EFF63;
         }
 
         button {
             width: 100%;
-            background-color: #0F4EFF63;
-            color: white;
-            border: none;
+          
             border-radius: 8px;
-            padding: 12px;
+            padding: 25px;
             font-size: 16px;
             cursor: pointer;
             transition: 0.3s ease;
+            background-color:  #0F4EFF63;
         }
 
         button:hover {
-            background-color: #0F4EFF63;
+            background-color:  #0F4EFF63;
         }
-*/
+    
+
 
 footer {
   text-align: center;
@@ -294,3 +282,24 @@ footer {
   margin-top: 40px;
   color: var(--muted);
 }
+
+/* Icon container */
+    .social-icons {
+      display: flex;
+      gap: 20px; /* space between icons */
+      justify-content: center; /* center icons horizontally */
+      margin-top: 50px;
+    }
+
+    /* Icon styles */
+    .social-icons a {
+      font-size: 35px;
+      color: #06052F; /* default icon color */
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    /* Hover effect */
+    .social-icons a:hover {
+      color: #0F4EFF; /* change color on hover */
+      transform: scale(1.2); /* slightly enlarge on hover */
+    }
